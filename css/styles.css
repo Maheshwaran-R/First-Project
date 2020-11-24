@@ -2,3 +2,23 @@
 
     background-color: rgb(230, 220, 207) ;
 }
+
+.fa-facebook {
+    color: #4267B2;
+}
+
+.fa-instagram {
+    color: #FF1493;
+}
+
+.fa-twitter {
+    color: rgb(29,161,242);
+}
+
+.fa-phone {
+    color: rgb(68, 68, 68);
+}
+
+.fa-user {
+    color:  rgb(68, 68, 68);
+}
