@@ -1,0 +1,31 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "description": "This is my first project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maheshwaran-R/First-Project.git"
+  },
+  "author": "Maheshwaran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maheshwaran-R/First-Project/issues"
+  },
+  "homepage": "https://github.com/Maheshwaran-R/First-Project#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
+}
