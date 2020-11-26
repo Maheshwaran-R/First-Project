@@ -15,10 +15,10 @@
         <link rel="stylesheet" href="css/styles.css">  
     </head>
 
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#"><img src="img/logo-cinephile.png" height="70" width="70"></a>
+    <body class="bg-dark">
 
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top " >
+            <a class="navbar-brand" href="#"><img src="img/cinephile-logo.png" height="50" width="50"></a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars fa-lg "></span>
                 </button>
@@ -26,44 +26,73 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link text-dark" href="#"><span class="fa fa-home fa-lg"></span> Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link " href="#"><span class="fa fa-home fa-lg"></span> Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#"> <span class="fa fa-info-circle fa-lg"></span> About Us</a>
+                            <a class="nav-link text-light" href="#"> <span class="fa fa-info-circle fa-lg"></span> About Us</a>
                         </li>
-                            <a class="nav-link waves-effect waves-light" href="http://www.facebook.com" >
+                            <a class="nav-link waves-effect waves-light" data-toggle="tooltip" data-placement="auto" title="facebook" data-html="true" href="http://www.facebook.com" >
                                 <i class="fa fa-facebook"></i>
                             </a>
 
-                            <a class="nav-link waves-effect waves-light" href="http://www.instagram.com">
+                            <a class="nav-link waves-effect waves-light" data-toggle="tooltip" data-placement="auto" title="instagram" data-html="true"  href="http://www.instagram.com">
                                 <i class="fa fa-instagram"></i>
                             </a>
-                            <a class="nav-link waves-effect waves-light" href="http://www.facebook.com">
+                            <a class="nav-link waves-effect waves-light" data-toggle="tooltip" data-placement="auto" title="twitter" data-html="true"  href="http://www.facebook.com">
                                 <i class="fa fa-twitter"></i>
                             </a>
-                            <a class="nav-link waves-effect waves-light text-dark" href="tel:+919488192333">
-                                <i class="fa fa-phone"></i> +919488192333 
+                            <a class="nav-link waves-effect waves-light " data-toggle="tooltip" data-placement="auto" title="call us" data-html="true"  href="tel:+919488192333">
+                                <i class="fa fa-phone "></i> +919488192333 
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="fa fa-user"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" >Accounts</a>
+                                <a class="dropdown-item nav-link text-dark" href="#" >Login</a>
                                 <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Account 1</a>
-                                    <a class="dropdown-item" href="#">Account 2</a>
+                                    <a class="dropdown-item nav-link text-dark" href="#">Sign in</a>
                                 </div>
+                            </div>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <a class="nav-link text-dark" href="#"> <span class="fa fa-search fa-lg"></span> </a>
-                    </form>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                    </div>
                 </div>
-        </nav>
+        </nav> 
 
+        <div class="row row-content align-items-center">
+
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img class="col-sm-4 d-flex mr-2 align-self-center"
+                    src="img/SnyderCut.png" alt="SnyderCut">
+                <div class="media-body">
+                    <h4 class="mt-0 text-light">Justice League:Snyder cut <span class="badge badge-danger badge-sm">NEW</span> </h4>
+                    <p class="d-none d-sm-block justify-content-center text-light">The Snyder Cut will be released in four one-hour installments sometime in 2021, and now HBO Max and Warner Bros. have shut down a rumor about the possible intended release date. ... This latest update comes to us from ScreenRant, who heard from Warner Bros. “I want to thank HBO Max and Warner Brothers for this brave gesture of supporting artists and allowing their true visions to be realized. Also a special thank you to all of those involved in the SnyderCut movement for making this a reality,” said Snyder in a statement announcing the news. WHAT IF THE SNYDER CUT ISN’T BETTER THAN JOSS WHEDON’S? What if it is?</p>
+                    <button type="button" class="btn btn-outline-secondary ">Know more->></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-content align-items-center">
+        <div class="col col-sm order-sm-last col-md">
+            <div class="media">
+                <img class="col-sm-4 d-flex mr-2 align-self-center"
+                    src="img/TheSuicideSquad.png" alt="TheSuicideSquad">
+                    <div class="media-body order-sm-first">
+                        <h4 class="mt-0 text-light">Suicide Squad <span class="badge badge-danger">NEW</span></h4>
+                        <p class="d-none d-sm-block text-light">A new The Suicide Squad movie image unites all the Task Force X characters from James Gunn's upcoming DC movie. A quasi-sequel to David Ayer's 2016 Suicide Squad, Gunn's film brings back a handful of characters previously introduced to the DC Extended Universe to feature alongside a host of new villains and anti-heroes. Margot Robbie's Harley Quinn is back, after starring in her own movie earlier this year - Cathy Yan's Birds of Prey and the Fantabulous Emancipation of One Harley Quinn. She's joined by fellow returning stars Jai Courtney as Captain Boomerang and Joel Kinnaman as Rick Flag; Viola Davis is also back as Amanda Waller, the squad's handler.In addition to those actors.....</p>
+                        <button type="button" class="btn btn-outline-secondary  ">Know more->></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
             <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
             <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
             <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
