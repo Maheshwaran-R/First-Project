@@ -18,7 +18,7 @@
     <body class="bg-dark">
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top " >
-            <a class="navbar-brand" href="#"><img src="img/cinephile-logo.png" height="50" width="50"></a>
+            <a class="navbar-brand" href="#"><img src="img/cinephile-logo.png" height="60" width="60"></a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars fa-lg "></span>
                 </button>
@@ -41,18 +41,22 @@
                             <a class="nav-link waves-effect waves-light" data-toggle="tooltip" data-placement="auto" title="twitter" data-html="true"  href="http://www.facebook.com">
                                 <i class="fa fa-twitter"></i>
                             </a>
-                            <a class="nav-link waves-effect waves-light " data-toggle="tooltip" data-placement="auto" title="call us" data-html="true"  href="tel:+919488192333">
-                                <i class="fa fa-phone "></i> +919488192333 
+                            <a class="nav-link waves-effect waves-light" data-toggle="tooltip" data-placement="auto" title="call us:+919488192333" data-html="true"  href="tel:+919488192333">
+                                <i class="fa fa-phone "></i> 
                             </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="fa fa-user"></span>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item nav-link text-dark" href="#" >Login</a>
+                            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <a class="btn btn-block text-white nav-link btn-dark btn-sm" role="button" id="loginButton">
+                                    <strong>Login</strong>
+                                </a>
                                 <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item nav-link text-dark" href="#">Sign in</a>
+                                <a class="btn btn-block text-white nav-link btn-dark btn-sm" role="button" id="signinButton">
+                                    <strong>Sign in</strong>
+                                </a>
                                 </div>
                             </div>
                         </li>
@@ -63,40 +67,181 @@
                 </div>
         </nav> 
 
-        <div class="row row-content align-items-center">
-
-            <div class="col col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="col-sm-4 d-flex mr-2 align-self-center"
-                    src="img/SnyderCut.png" alt="SnyderCut">
-                <div class="media-body">
-                    <h4 class="mt-0 text-light">Justice League:Snyder cut <span class="badge badge-danger badge-sm">NEW</span> </h4>
-                    <p class="d-none d-sm-block justify-content-center text-light">The Snyder Cut will be released in four one-hour installments sometime in 2021, and now HBO Max and Warner Bros. have shut down a rumor about the possible intended release date. ... This latest update comes to us from ScreenRant, who heard from Warner Bros. “I want to thank HBO Max and Warner Brothers for this brave gesture of supporting artists and allowing their true visions to be realized. Also a special thank you to all of those involved in the SnyderCut movement for making this a reality,” said Snyder in a statement announcing the news. WHAT IF THE SNYDER CUT ISN’T BETTER THAN JOSS WHEDON’S? What if it is?</p>
-                    <button type="button" class="btn btn-outline-secondary ">Know more->></button>
-                </div> 
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-content align-items-center">
-        <div class="col col-sm order-sm-last col-md">
-            <div class="media">
-                <img class="col-sm-4 d-flex mr-2 align-self-center"
-                    src="img/TheSuicideSquad.png" alt="TheSuicideSquad">
-                    <div class="media-body order-sm-first">
-                        <h4 class="mt-0 text-light">Suicide Squad <span class="badge badge-danger">NEW</span></h4>
-                        <p class="d-none d-sm-block text-light">A new The Suicide Squad movie image unites all the Task Force X characters from James Gunn's upcoming DC movie. A quasi-sequel to David Ayer's 2016 Suicide Squad, Gunn's film brings back a handful of characters previously introduced to the DC Extended Universe to feature alongside a host of new villains and anti-heroes. Margot Robbie's Harley Quinn is back, after starring in her own movie earlier this year - Cathy Yan's Birds of Prey and the Fantabulous Emancipation of One Harley Quinn. She's joined by fellow returning stars Jai Courtney as Captain Boomerang and Joel Kinnaman as Rick Flag; Viola Davis is also back as Amanda Waller, the squad's handler.In addition to those actors.....</p>
-                        <button type="button" class="btn btn-outline-secondary  ">Know more->></button>
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-light">Login <span class="fa fa-sign-in"></span></h4>
+                        <button type="button" class="close text-light" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                    placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                    placeholder="Password">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label text-light"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                    data-dismiss="modal"><strong>Cancel</strong></button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1"><strong>Login</strong></button>
+                            </div>
+                                
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div id="signinModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-light">Sign in <span class="fa fa-sign-in"></span></h4>
+                        <button type="button" class="close text-light" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                    placeholder="Create email">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                    placeholder="Create password">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label text-light"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                    data-dismiss="modal"><strong>Cancel</strong></button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1"><strong>Sign in</strong></button>
+                            </div>
+                                
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img class="col-sm-4 d-flex mr-2 align-self-center"
+                    src="img/SnyderCut.png" alt="SnyderCut">
+                <div class="media-body">
+                    <h5 class="mt-0 text-light">Justice League : Snyder cut <span class="badge badge-pill badge-danger badge-sm">NEW</span> </h5>
+                    <p class="d-none d-sm-block justify-content-center text-light">The Snyder Cut will be released in four one-hour installments sometime in 2021, and now HBO Max and Warner Bros. have shut down a rumor about the possible intended release date. ... This latest update comes to us from ScreenRant, who heard from Warner Bros. “I want to thank HBO Max and Warner Brothers for this brave gesture of supporting artists and allowing their true visions to be realized. Also a special thank you to all of those involved in the SnyderCut movement for making this a reality,” said Snyder in a statement announcing the news. WHAT IF THE SNYDER CUT ISN’T BETTER THAN JOSS WHEDON’S? What if it is?</p>
+                    <button type="button" class="btn btn-outline-secondary ">Know more->></button>
+                    <a class="text-warning" href="https://youtu.be/XIOU_k4mwDw"> Watch the Trailer-></a>
+                </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col col-sm order-sm-last col-md">
+                <div class="media">
+                    <img class="col-sm-4 d-flex mr-2 align-self-center"
+                        src="img/TheSuicideSquad.png" alt="TheSuicideSquad">
+                        <div class="media-body order-sm-first">
+                            <h5 class="mt-0 text-light">Suicide Squad <span class="badge badge-pill badge-danger badge-sm">NEW</span></h5>
+                            <p class="d-none d-sm-block text-light">A new The Suicide Squad movie image unites all the Task Force X characters from James Gunn's upcoming DC movie. A quasi-sequel to David Ayer's 2016 Suicide Squad, Gunn's film brings back a handful of characters previously introduced to the DC Extended Universe to feature alongside a host of new villains and anti-heroes. Margot Robbie's Harley Quinn is back, after starring in her own movie earlier this year - Cathy Yan's Birds of Prey and the Fantabulous Emancipation of One Harley Quinn. She's joined by fellow returning stars Jai Courtney as Captain Boomerang and Joel Kinnaman as Rick Flag; Viola Davis is also back as Amanda Waller, the squad's handler.In addition to those actors.....</p>
+                            <button type="button" class="btn btn-outline-secondary  ">Know more->></button>
+                            <a class="text-warning" href="https://youtu.be/A8tWKJwyG6Y"> Watch the Trailer-></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img class="col-sm-4 d-flex mr-2 align-self-center"
+                    src="img/SpiderMan.png" alt="SnyderCut">
+                <div class="media-body">
+                    <h5 class="mt-0 text-light">Spiderman 3 <span class="badge badge-pill badge-danger badge-sm">NEW</span> </h5>
+                    <p class="d-none d-sm-block justify-content-center text-light">Spider-Man 3 is an upcoming superhero film, based on the Marvel Comics superhero of the same name. The film is a sequel to Spider-Man: Homecoming, Spider-Man: Far From Home, and WandaVision and a prequel to Doctor Strange in the Multiverse of Madness. It is the twenty-seventh film in the Marvel Cinematic Universe and the fourth film of Phase Four. The film is set to be released on December 17, 2021.On June 14, 2017, during an interview with AlloCiné, Tom Holland announced that Sony Pictures and Marvel Studios were making a trilogy of Spider-Man films, with two more films informally titled Spider-Man 2 and Spider-Man 3, as opposed to the Homecoming 2 title that Sony had announced in December 2016.Is this the start for a MULTIVERSE?</p>
+                    <button type="button" class="btn btn-outline-secondary ">Know more->></button>
+                </div> 
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer bg-dark">
+                <div class="row row-content footer justify-content-center">             
+                    <div class="col-auto justify-content-center ">
+                        </li>
+                            <a class="waves-effect waves-light col" data-toggle="tooltip" data-placement="auto" title="facebook" data-html="true" href="http://www.facebook.com" >
+                                <i class="fa fa-facebook fa-lg"></i>
+                            </a>
+
+                            <a class="waves-effect waves-light col" data-toggle="tooltip" data-placement="auto" title="instagram" data-html="true"  href="http://www.instagram.com">
+                                <i class="fa fa-instagram fa-lg"></i>
+                            </a>
+                            <a class="waves-effect waves-light col" data-toggle="tooltip" data-placement="auto" title="twitter" data-html="true"  href="http://www.facebook.com">
+                                <i class="fa fa-twitter fa-lg"></i>
+                            </a>
+                            <a class="waves-effect waves-light col" data-toggle="tooltip" data-placement="auto" title="call us:+919488192333" data-html="true"  href="tel:+919488192333">
+                                <i class="fa fa-phone fa-lg"></i> 
+                            </a>
+                        </li>
+                        </li>
+                            <a class="text-color col" href="#">Home</a>
+                            <a class="text-color col" href="#">About Us</a>
+                            <a class="text-color col" href="#">Contact Us</a>
+                        </li>
+                        <a class="col-auto text-light">© Copyright 2020 Cinephile</a>
+                    </div>
+                </div>
+        </footer>
+
         
             <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+            <!-- build:js js/main.js -->
             <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
             <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
             <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
             <script src="js/scripts.js"></script>
+            <script>                
+                $(document).ready(function() {
+                    $("#loginButton").click(function() {
+                        $("#loginModal").modal('toggle');
+                    });
+                });
+            </script>
+            <script>                
+                $(document).ready(function() {
+                    $("#signinButton").click(function() {
+                        $("#signinModal").modal('toggle');
+                    });
+                });
+            </script>           
+            <!-- endbuild -->
     </body>
 </hmtl>
